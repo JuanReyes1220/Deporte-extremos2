@@ -1,0 +1,564 @@
+/* INDEXT CSS TODO LA  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial Black', sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* Header con foto de fondo */
+header {
+    height: 300px;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                url('https://images.unsplash.com/photo-1522163182402-834f871fd851?q=80&w=1403&auto=format&fit=crop') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+header h1 {
+    font-size: 3.5rem;
+    color: #ff6600;
+    text-shadow: 3px 3px #000;
+}
+
+/* Navegación */
+nav {
+    background-color: #ff6600;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #000;
+}
+
+/* Contenido Principal */
+section {
+    padding: 50px 10%;
+    min-height: 400px;
+}
+
+h2 {
+    color: #ff6600;
+    margin-bottom: 20px;
+    border-left: 5px solid #ff6600;
+    padding-left: 15px;
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    color: #777;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    border-top: 2px solid #ff6600;
+}
+
+
+
+                                                      /*PRODUCTOS CSS*/
+
+
+/* Display Tipo Tarjeta */
+.productos-grid {
+    display: grid;
+
+
+/* Crea columnas automáticas de mínimo 250px */
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 30px;
+padding: 20px 0;
+}
+
+/* Tarjeta de producto individual */
+.producto-card {
+    background-color: var(--gris-oscuro);
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.producto-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--naranja);
+}
+
+/* Ajuste de las imágenes */
+.producto-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain; /* Ajusta la imagen sin deformarla */
+    background-color: #fff; /* Fondo blanco para que resalten los productos */
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.producto-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--blanco);
+}
+
+.precio {
+    color: var(--naranja);
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Botón de compra */
+.btn-comprar {
+    background-color: var(--naranja);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s;
+    width: 100%;
+}
+
+.btn-comprar:hover {
+    background-color: #e65c00;
+}
+
+                                                        /*CONTENIDO CSS/
+
+
+/* Estilos para el Reportaje Especial */
+.reportaje-especial {
+    background: #1a1a1a;
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 40px;
+    border-left: 8px solid var(--naranja);
+}
+
+.contenido-flex {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+/* Contenedor de Imagen y Badge */
+.imagen-autor {
+    position: relative;
+    flex: 1;
+}
+
+.imagen-autor img {
+    width: 100%;
+    border-radius: 10px;
+    filter: grayscale(30%);
+    transition: filter 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+.imagen-autor:hover img {
+    filter: grayscale(0%);
+}
+
+.badge-record {
+    position: absolute;
+    top: 20px;
+    left: -15px;
+    background-color: var(--naranja);
+    color: white;
+    padding: 8px 15px;
+    font-weight: bold;
+    font-size: 0.8rem;
+    transform: rotate(-5deg);
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.5);
+}
+
+/* Estilo del texto */
+.texto-historia {
+    flex: 1.5;
+}
+
+.texto-historia h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.texto-historia p {
+    margin-bottom: 20px;
+    color: #ccc;
+    font-size: 1.1rem;
+}
+
+blockquote {
+    border-left: 3px solid var(--naranja);
+    padding-left: 20px;
+    font-style: italic;
+    color: var(--naranja);
+    margin: 30px 0;
+    font-size: 1.3rem;
+}
+
+.btn-leer-mas {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: transparent;
+    border: 2px solid var(--naranja);
+    color: var(--naranja);
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.btn-leer-mas:hover {
+    background-color: var(--naranja);
+    color: white;
+}
+
+/* Ajuste para móviles */
+@media (max-width: 900px) {
+    .contenido-flex {
+        flex-direction: column;
+    }
+    .imagen-autor, .texto-historia {
+        flex: none;
+        width: 100%;
+    }
+}
+
+/* Espaciado entre artículos */
+.reportaje-especial {
+    margin-bottom: 50px; /* Separa un artículo del otro */
+}
+
+/* Variación para alternar la posición de la imagen */
+.contenido-flex.inverse {
+    flex-direction: row-reverse; /* Cambia el orden de texto e imagen */
+}
+
+/* Efecto extra para las citas */
+blockquote {
+    border-left: 4px solid var(--naranja);
+    padding-left: 20px;
+    font-style: italic;
+    color: var(--naranja);
+    margin: 25px 0;
+    font-size: 1.2rem;
+    background: rgba(255, 102, 0, 0.05); /* Un fondo muy sutil naranja */
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* Asegurar que las imágenes tengan el mismo estilo */
+.imagen-autor img {
+    width: 100%;
+    height: 400px; /* Altura fija para que todas las fotos de autor se vean iguales */
+    object-fit: cover; /* Recorta la imagen para llenar el espacio sin deformarse */
+    border-radius: 10px;
+}
+
+/* Ajuste móvil para la inversión de filas */
+@media (max-width: 900px) {
+    .contenido-flex.inverse {
+        flex-direction: column; /* En móvil siempre la foto arriba del texto */
+    }
+}
+
+                                                          /*GALERIA CSS*/
+
+/* Contenedor General de la Galería */
+.galeria-container {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.seccion-multimedia h2 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+/* FOTOS: Cuadrícula de 4 imágenes */
+.grid-fotos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.foto-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.4s ease, filter 0.4s ease;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.foto-item img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+    border-color: var(--naranja);
+}
+
+/* VIDEOS: 2 videos en paralelo */
+.grid-videos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.video-item iframe {
+    width: 100%;
+    height: 250px;
+    border-radius: 8px;
+    border: 2px solid var(--gris-oscuro);
+}
+
+/* MÚSICA: Lista de reproductores */
+.lista-musica {
+    background: var(--gris-oscuro);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.audio-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #333;
+}
+
+.audio-item:last-child {
+    border-bottom: none;
+}
+
+.audio-item p {
+    font-weight: bold;
+    color: var(--naranja);
+}
+
+/* Estilo básico para el reproductor de audio */
+audio {
+    filter: invert(100%) hue-rotate(180deg) brightness(1.5); /* Esto hace que el reproductor gris se vea más acorde al tema oscuro */
+    height: 35px;
+}
+
+/* Responsivo para móviles */
+@media (max-width: 600px) {
+    .audio-item {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}
+
+
+                                                      /*ACERCA CSS*/
+
+/* Estilos para la sección Sobre Nosotros */
+.sobre-nosotros {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+/* Encabezado con la barra naranja (estilo image_6497bf.png) */
+.nosotros-header h2 {
+    font-size: 2.5rem;
+    color: var(--naranja);
+    border-left: 5px solid var(--naranja);
+    padding-left: 20px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.intro-text {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--blanco);
+    margin-bottom: 80px;
+    line-height: 1.8;
+}
+
+/* Bloques de información y fotos */
+.bloque-nosotros {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 100px;
+}
+
+.bloque-nosotros.reverse {
+    flex-direction: row-reverse;
+}
+
+.info-content {
+    flex: 1;
+}
+
+.info-content h3 {
+    color: var(--naranja);
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.info-content p {
+    color: #cccccc;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Estilo de las Imágenes */
+.info-image {
+    flex: 1;
+}
+
+.info-image img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid #333;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.info-image img:hover {
+    transform: scale(1.03);
+    border-color: var(--naranja);
+}
+
+/* Ajuste para tablets y móviles */
+@media (max-width: 768px) {
+    .bloque-nosotros, .bloque-nosotros.reverse {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .nosotros-header h2 {
+        font-size: 2rem;
+    }
+}
+
+                                                         /*INICIO CSS*/
+
+/* Contenedor Principal */
+.inicio-nueva {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* Estilo de Bienvenida */
+.bienvenida-texto h1 {
+    font-size: 3.5rem;
+    color: var(--blanco);
+    margin-bottom: 10px;
+    letter-spacing: -2px;
+}
+
+.bienvenida-texto p {
+    color: var(--naranja);
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+/* Video Responsivo */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+    height: 0;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+    margin-bottom: 50px;
+    border: 1px solid #333;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Sección de Bullets */
+.presentacion-sitio {
+    background-color: var(--gris-oscuro);
+    padding: 40px;
+    border-radius: 15px;
+    text-align: left;
+    border-left: 5px solid var(--naranja);
+}
+
+.presentacion-sitio h3 {
+    color: var(--blanco);
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+}
+
+.lista-presentacion {
+    list-style: none; /* Quitamos los puntos por defecto */
+    padding: 0;
+}
+
+.lista-presentacion li {
+    font-size: 1.2rem;
+    color: #cccccc;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.lista-presentacion li span {
+    color: var(--naranja);
+    font-weight: bold;
+    margin-right: 15px;
+    font-size: 1.5rem;
+}
+
+.lista-presentacion strong {
+    color: var(--blanco);
+    margin-right: 5px;
+}
+
+/* Ajustes para Móvil */
+@media (max-width: 768px) {
+    .bienvenida-texto h1 { font-size: 2.5rem; }
+    .presentacion-sitio { padding: 20px; }
+}
